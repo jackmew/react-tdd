@@ -27,5 +27,9 @@ describe('App', () => {
         it('adds a new gift to a rendered list when clicking the `add gift` button', () => {
             expect(app.find('.gift-list').children().length).toEqual(1);
         });
+
+        it('creates a Gift component', () => {
+            expect(app.find('Gift').exists()).toBe(true);
+        });
     });
 });
